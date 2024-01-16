@@ -9,8 +9,8 @@
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 
-const char* ssid_Router     =   "********";   //Modify according to your router name
-const char* password_Router =   "********";   //Modify according to your router password
+const char* ssid_Router     =   "warp5";   //Modify according to your router name
+const char* password_Router =   "warpFactorInc";   //Modify according to your router password
 const char* ssid_AP         =   "Sunshine";   //ESP32 turns on an AP and calls it Sunshine
 const char* password_AP     =   "Sunshine";   //Set your AP password for ESP32 to Sunshine
 WiFiServer server_Cmd(4000);
@@ -19,6 +19,7 @@ WiFiServer server_Camera(7000);
 void setup() {
   Serial.begin(115200);
   Serial.println();
+  // WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid_AP, password_AP);//Turn on ESP32's AP feature
   server_Camera.begin(7000);        //Turn on camera server
   server_Cmd.begin(4000);           //Turn on Cmd server

@@ -7,7 +7,7 @@
 
 #include "Freenove_VK16K33_Lib_For_ESP32.h"
 
-#define EMOTION_ADDRESS 0x71
+#define EMOTION_ADDRESS 0x70
 #define EMOTION_SDA     13
 #define EMOTION_SCL     14
 
